@@ -1,2 +1,3 @@
 # Today-I-Learnd
-A personal note about what I learn every day through my leaning journy!
+Personal notes on what I learn every day through my learning journey! I also look forward to improving my English Reading & Writing skills during this process.
+So, let's go!
