@@ -8,37 +8,61 @@
 
         private void copy_button_Click(object sender, EventArgs e)
         {
-            string sourceDirectoryName = "orginal directory";
-            string targetDirectoryName = "the new directory";
-            string masterPath = @"C:\Users\MY_USER_NAME\Desktop";
-
-            var sourceDirectoryPath = Path.Combine(masterPath, sourceDirectoryName);
-            var targetDirectoryPath = Path.Combine(masterPath, targetDirectoryName);
-           
-
             label1.Text = "copping has been started, please waite ....";
 
-            CopyFiles(sourceDirectoryPath,targetDirectoryPath);
+            if (newDiractoryName.Text.Trim()!="")
+            {
+                CopyFiles(newDiractoryName.Text);
+            }
+
+            else
+            {
+                MessageBox.Show("Please enter a valid name");
+            }
+                
             label1.Text = "copy completed!";
 
 
         }
 
-        //Source: stack overflow
 
-        private static  void  CopyFiles(string sourcePath, string targetPath)
+        private static  void  CopyFiles(string newDirectoryName)
         {
+            string sourceDirectoryName = "sad";
+            string targetDirectoryName = newDirectoryName;
+            string masterPath = @"C:\Users\orange\Desktop";
+
+            var sourcePath = Path.Combine(masterPath, sourceDirectoryName);
+            var targetPath = Path.Combine(masterPath, targetDirectoryName);
+
             //Now Create all of the directories
-            foreach (string dirPath in Directory.GetDirectories(sourcePath, "*", SearchOption.AllDirectories))
+            try
             {
-                Directory.CreateDirectory(dirPath.Replace(sourcePath, targetPath));
+                foreach (string dirPath in Directory.GetDirectories(sourcePath, "*", SearchOption.AllDirectories))
+                {
+                    Directory.CreateDirectory(dirPath.Replace(sourcePath, targetPath));
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("An error acoured!");
             }
 
             //Copy all the files & Replaces any files with the same name
-            foreach (string newPath in Directory.GetFiles(sourcePath, "*.*", SearchOption.AllDirectories))
+            try
             {
-                File.Copy(newPath, newPath.Replace(sourcePath, targetPath), true);
+                foreach (string newPath in Directory.GetFiles(sourcePath, "*.*", SearchOption.AllDirectories))
+                {
+                    File.Copy(newPath, newPath.Replace(sourcePath, targetPath), true);
+                }
             }
+            catch (Exception)
+            {
+
+                MessageBox.Show("An error acoured!");
+            }
+            
         }
 
 
