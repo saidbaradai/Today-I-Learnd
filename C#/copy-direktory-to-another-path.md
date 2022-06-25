@@ -35,23 +35,17 @@
             var sourcePath = Path.Combine(masterPath, sourceDirectoryName);
             var targetPath = Path.Combine(masterPath, targetDirectoryName);
 
-            //Now Create all of the directories
-            try
+
+           try
             {
+                //Now Create all of the directories
                 foreach (string dirPath in Directory.GetDirectories(sourcePath, "*", SearchOption.AllDirectories))
                 {
                     Directory.CreateDirectory(dirPath.Replace(sourcePath, targetPath));
                 }
-            }
-            catch (Exception)
-            {
-
-                MessageBox.Show("An error acoured!");
-            }
-
-            //Copy all the files & Replaces any files with the same name
-            try
-            {
+         
+                //Copy all the files & Replaces any files with the same name
+            
                 foreach (string newPath in Directory.GetFiles(sourcePath, "*.*", SearchOption.AllDirectories))
                 {
                     File.Copy(newPath, newPath.Replace(sourcePath, targetPath), true);
