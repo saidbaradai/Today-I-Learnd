@@ -12,3 +12,18 @@ but to merge those back in to the master branch before pushing (i.e. only share 
 rather than cluttering up their repositories with short-lived branches). 
 The Publish command lets you select branches that you do want to share with other users. 
 See the Microsoft docs for further details.
+
+
+
+
+
+
+
+## fetch
+
+Downloads new data from a remote repository (GitHub in our examples).  However, it doesn’t integrate any of the new data into the working files. Fetch is ideal for receiving a view of the modifications that has occurred at the remote repo.
+
+## pull
+
+Updates your current head branch with the latest modifications from the remote repo.  As part of the pull process and pulling down of new data, it also merges the new data into your current files, which can have negative outcomes.
+
