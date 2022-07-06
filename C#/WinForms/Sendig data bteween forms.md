@@ -14,3 +14,13 @@ private void button1_Click(object sender, EventArgs e)
 }
 ```
 
+Getting the data in form1 and form3
+
+
+```c#
+private void button1_Click(object sender, EventArgs e)
+{   
+    string text=  ControlID.TextData;   
+}
+```
+
