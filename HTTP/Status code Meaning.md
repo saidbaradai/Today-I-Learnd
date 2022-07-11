@@ -13,7 +13,7 @@ Status code	Meaning
  	 
 2xx Succesful	 
 
-**200	OK
+**200	OK**
 
 201	Created
 
@@ -57,7 +57,7 @@ Status code	Meaning
  	 
 4xx Client Error	 
 
-**400	Bad Request
+**400	Bad Request**
 
 401	Unauthorized
 
