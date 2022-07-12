@@ -1,0 +1,1 @@
+ **“Watchers” are Github users who have asked to be notified of activity in a repository, but have not become collaborators**. Watching a repository is similar to following an RSS feed to see changes. Forks, pulls, and commits are counted by the Git software running on the Github servers.
