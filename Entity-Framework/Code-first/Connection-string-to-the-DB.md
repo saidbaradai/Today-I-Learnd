@@ -6,6 +6,9 @@
 		 connectionString="data source=DESKTOP-RV90A7V\SQLEXPRESS;Initial Catalog=BlogSite;Integrated Security=True" 
 		 providerName="System.Data.SqlClient" />
   </connectionStrings>
+  
+  
+  Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;
 ```
 
 
