@@ -29,7 +29,8 @@ DROP TABLE TestTable
 TRUNCATE TABLE TestTable
 
 
-
+# change column name
+EXEC sp_rename 'TableName.OldName', 'NewName', 'COLUMN'
 
 
 ```
