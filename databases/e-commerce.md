@@ -1,5 +1,6 @@
 
-
+### I saw a video about e-commerce database diagram on youtub from the *[database Star channel]*, and i wrote the sql statments for it using MSSQL.
+(diagram and the video link is attached below the file)
 
 ```sql
 
@@ -225,3 +226,14 @@ foreign key(ordered_product_id) references shop_order(shop_order_id),
 )
 go
 ```
+
+
+
+[source video](https://www.youtube.com/watch?v=1HamqOuv2Cw&ab_channel=DatabaseStar)
+
+## Diagram
+
+
+![erd_ecommerce_database](https://user-images.githubusercontent.com/73998098/215359452-a883563e-61c6-4935-b786-9057d50fa74f.png)
+
+
